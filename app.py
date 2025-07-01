@@ -1,7 +1,7 @@
-prices = [10, 20, 30]
-total = 0
+numbers = [5, 2, 5, 2, 2]
 
-for i in prices:
-    total += i
-
-print(f"Total: {total}")
+for i in numbers:
+    output = ""
+    for count in range(i):
+        output += "x"
+    print(output)
