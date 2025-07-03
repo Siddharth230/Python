@@ -1,9 +1,20 @@
-numbers = [3, 5, 4, 7, 9, 10]
-max = numbers[0]
+phone = input("Phone: ")
 
-for i in numbers:
-    if i > max:
-        max = i
-        print(max)
+digits_mapping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four",
+    "5": "Five",
+    "6": "Six",
+    "7": "Seven",
+    "8": "Eight",
+    "9": "Nine",
+    "0": "Zero",
+}
 
-print(f"Largest number in array is {max}")
+output = ""
+for i in phone:
+    output += digits_mapping.get(i, "!") + " "
+
+print(output)
