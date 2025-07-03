@@ -1,20 +1,11 @@
-phone = input("Phone: ")
+message = input(">")
 
-digits_mapping = {
-    "1": "One",
-    "2": "Two",
-    "3": "Three",
-    "4": "Four",
-    "5": "Five",
-    "6": "Six",
-    "7": "Seven",
-    "8": "Eight",
-    "9": "Nine",
-    "0": "Zero",
-}
+words = message.split(" ")
+
+emojis = {":)": "😀", ":(": "☹️"}
 
 output = ""
-for i in phone:
-    output += digits_mapping.get(i, "!") + " "
+for i in words:
+    output += emojis.get(i, i) + " "
 
 print(output)
