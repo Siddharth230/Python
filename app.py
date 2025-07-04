@@ -1,19 +1,7 @@
-class Mammal:
-    def walk(self):
-        print("walk")
+from utils import find_max
 
+numbers = [10, 3, 6, 2]
 
-class Dog(Mammal):
-    def bark(self):
-        print("bark")
+maximum = find_max(numbers)
 
-
-class Cat(Mammal):
-    def purr(self):
-        print("purr")
-
-
-dog1 = Dog()
-dog1.walk()
-cat1 = Cat()
-cat1.walk()
+print(maximum)
