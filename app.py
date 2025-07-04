@@ -1,8 +1,13 @@
-from ecommerce.shipping import calc_shipping
-# from ecommerce import shipping
-# import ecommerce.shipping
+import random
 
-# ecommerce.shipping.calc_shipping()
-# shipping.calc_shipping()
 
-calc_shipping()
+class Dice:
+    def roll(self):
+        x = random.randint(1, 6)
+        y = random.randint(1, 6)
+        return x, y
+
+
+dice = Dice()
+
+print(dice.roll())
