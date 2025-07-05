@@ -1,13 +1,8 @@
-import random
+from pathlib import Path
+import openpyxl
 
+path = Path()
+for i in path.glob('*'):
+    print(i)
 
-class Dice:
-    def roll(self):
-        x = random.randint(1, 6)
-        y = random.randint(1, 6)
-        return x, y
-
-
-dice = Dice()
-
-print(dice.roll())
+print(openpyxl.__version__)
