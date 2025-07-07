@@ -1,65 +1,62 @@
-# Data types
+# Arithmetic Operators (+, -, *, /, //, %, **)
 
-# Integers ( int )
-n = 10
-print(f"n = {n}")
-print("n is of type:", type(n), "\n")
+n = 10 + 13 * 2
+print(n)
 
+a = 10
+b = 4
 
-# Float ( float )
-r = 6.3
-print(f"r = {r}")
-print("r is of type:", type(r), "\n")
+print(f"a = {a} & b = {b}")
 
-a = float(9)
-print(f"a = {a}")
-print(type(a), "\n")
+print("Addition", a + b)
 
+print("Subtraction", a - b)
 
-# String ( str )
-s = "Siddharth"
-print(f"s = {s}")
-print("s is of type:", type(s), "\n")
+print("Multiplication", a * b)
 
+print("Division", a / b)
 
-# Boolean ( bool )
-b = True
-print(b)
-print(type(b), "\n")
+print("Floor Division", a // b)
 
-c = bool(0)
-print(c)
-print(type(c), "\n")
+print("Modulus", a % b)  # Provides remainder after the division
 
-d = bool(28)
-print(d)
-print(type(d), "\n")  # All values except 0 are considered as True
-
-e = bool('')
-print(e)
-print(type(e), "\n")  # Only empty strings are False
-
-f = bool("an31")
-print(f)
-print(type(f), "\n")
+print("Exponential", a ** b)
 
 
-# List ( list )
-l = [10, "Siddharth", [1, 2, False], True, 20, 30]
-print(l)
-print(type(l), "\n")
+# Relational Operators (<, >, <=, >=, ==, !=)
 
-print(l[0])
-print(type(l[0]), "\n")
+print("Less Than", 4 < 8)
+print("Less Than", 7 < 5)
 
-print(l[1])
-print(type(l[1]), "\n")
+print("Greater Than", 19 > 5)
+print("Greater Than", 6 > 1)
 
-print(l[2])
-print(type(l[2]))
-print(type(l[2][1]))
-print(l[2][2])
-print(type(l[2][2]), "\n")
+print("Less Than Equal To", 10 <= 5)
+print("Less Than Equal To", 2 <= 5)
+print("Less Than Equal To", 5 <= 5)
 
-print(l[3])
-print(type(l[3]), "\n")
+print("Greater Than Equal To", 8 >= 8)
+print("Greater Than Equal To", 9 >= 16)
+print("Greater Than Equal To", 9 >= 8)
+
+print("Equal To", 5 == 50)
+print("Equal To", 5 == 5)
+
+print("Not Equal To", 5 != 50)
+print("Not Equal To", 5 != 5)
+
+
+# Logical Operators (and, or, not)
+
+print("AND Operator", True and True)
+print("AND Operator", True and False)
+print("AND Operator", False and True)
+print("AND Operator", False and False)
+
+print("OR Operator", True or True)
+print("OR Operator", True or False)
+print("OR Operator", False or True)
+print("OR Operator", False or False)
+
+print("NOT Operator", not (True))
+print("NOT Operator", not False)  # Can be used both ways
