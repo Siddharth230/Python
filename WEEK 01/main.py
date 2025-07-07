@@ -1,62 +1,50 @@
-# Arithmetic Operators (+, -, *, /, //, %, **)
+s = "coffee"
+t = "bread"
 
-n = 10 + 13 * 2
-print(n)
+print(f"s = {s}")
+print(f"t = {t}")
+print(f"s + t = {s + t}")
+print(f"s[0] = {s[0]}")
+print(f"s[1:4] = {s[1:4]}")
+print(f"s[1:] = {s[1:]}", "\n")
 
-a = 10
-b = 4
+p = '0123456789'
+a = p[4]
+b = p[7]
+c = a + b
+print(f"p = {p}", type(p))
+print(f"a = p[4] = {a} ", type(a))
+print(f"b = p[7] = {b} ", type(b))
+print(f"c = a + b = {c}", type(c), "\n")
 
-print(f"a = {a} & b = {b}")
+x = int(p[4])
+y = int(p[7])
+z = x + y
+print(f"x = int(p[4]) = {x} ", type(x))
+print(f"y = int(p[7]) = {y} ", type(y))
+print(f"z = x + y = {z}", type(z), "\n")
 
-print("Addition", a + b)
+s = "good"
+print(f"s = {s}")
+print(f"s[0] * 5 = {s[0] * 5}", "\n")
 
-print("Subtraction", a - b)
+x = "India"
+print(f"x = {x}")
+print(f"x == 'India' {x == "India"}")
+print(f"x == 'india' {x == "india"}", "\n")
 
-print("Multiplication", a * b)
+print("apple" > "one")
+print("four" < "ten")
+print("a" < "o")  # Compares letters in alphabetical order
+print("cat" > "cap")
+print("abcdef" < "abcde")
 
-print("Division", a / b)
+s = "python"
+print(s[-1])
+print(s[-2])
+print(s[-3])
+print(s[-4])
+print(s[-5])
+print(s[-6])
 
-print("Floor Division", a // b)
-
-print("Modulus", a % b)  # Provides remainder after the division
-
-print("Exponential", a ** b)
-
-
-# Relational Operators (<, >, <=, >=, ==, !=)
-
-print("Less Than", 4 < 8)
-print("Less Than", 7 < 5)
-
-print("Greater Than", 19 > 5)
-print("Greater Than", 6 > 1)
-
-print("Less Than Equal To", 10 <= 5)
-print("Less Than Equal To", 2 <= 5)
-print("Less Than Equal To", 5 <= 5)
-
-print("Greater Than Equal To", 8 >= 8)
-print("Greater Than Equal To", 9 >= 16)
-print("Greater Than Equal To", 9 >= 8)
-
-print("Equal To", 5 == 50)
-print("Equal To", 5 == 5)
-
-print("Not Equal To", 5 != 50)
-print("Not Equal To", 5 != 5)
-
-
-# Logical Operators (and, or, not)
-
-print("AND Operator", True and True)
-print("AND Operator", True and False)
-print("AND Operator", False and True)
-print("AND Operator", False and False)
-
-print("OR Operator", True or True)
-print("OR Operator", True or False)
-print("OR Operator", False or True)
-print("OR Operator", False or False)
-
-print("NOT Operator", not (True))
-print("NOT Operator", not False)  # Can be used both ways
+print(len(s))
