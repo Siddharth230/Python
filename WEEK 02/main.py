@@ -1,61 +1,36 @@
+import math
+import random as r
+from calendar import calendar
 
-# * Problem 1
-number = int(input("Enter a number: "))
 
-if (number % 2) == 0:
-    print("It is an Even number")
+print(math.log(10))
+print(math.sqrt(225))
+print(math.factorial(4))
+
+# print(random.random())  # ? Random number between 0 and 1
+print(r.random())
+
+# a = random.random()
+a = r.random()
+
+if a < 0.5:
+    print('Heads')
 else:
-    print("It is an Odd number")
+    print('Tails')
 
 
-# * Problem 2
-num = int(input("Enter a number: "))
-
-if (num % 5) == 0:
-    if (num % 10) == 0:
-        print('0')
-    else:
-        print('5')
-else:
-    print("Other")
+print(r.randrange(1, 7))
 
 
-# * Problem 3
-marks = int(input("Enter students marks: "))
+dice1 = r.randrange(1, 7)
+dice2 = r.randrange(1, 7)
 
-if marks < 0 or marks > 100:
-    print('Invalid input: Marks must be between 0 and 100')
-elif marks >= 90:
-    print('A Grade')
-elif marks >= 80:
-    print('B Grade')
-elif marks >= 70:
-    print('C Grade')
-elif marks >= 60:
-    print('D Grade')
-else:
-    print('E Grade')
+total = dice1 + dice2
+
+print(f"Rolled dices ({dice1}, {dice2}). Total is {total}")
 
 
-# * Problem 4
-time = int(input('Enter time: '))
+# print(calendar.month(2025, 6))
+# print(calendar.calendar(2025))
 
-longer = int(input('Define longer: '))
-
-if time >= longer:
-    price = int(input('Enter price: '))
-    higher = int(input('Enter higher: '))
-    if price >= higher:
-        print('Train')
-    else:
-        print('Coach')
-else:
-    price = int(input('Enter price: '))
-    higher = int(input('Enter higher: '))
-    if price >= higher:
-        print('Daytime flight')
-    else:
-        print('Red Eye Flight')
-
-
-print('Arrive City B')
+print(calendar(2023))
