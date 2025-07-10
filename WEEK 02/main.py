@@ -1,14 +1,13 @@
-alpha = 'abcdefghijklmnopqrstuvwxyz'
 
-name = 'siddharth'
+# * If condition
 
-t = ''
+birth_year = int(input("Please enter your date of birth: "))
 
+current_year = 2025
 
-for character in name:
-    i = alpha.index(character)
-    i += 1
-    t = t + (alpha[i % 26])
+age = current_year - birth_year
 
-
-print(t)
+if age >= 13:
+    print("You can proceed to watch the movie")
+else:
+    print("You have not met the requirement for minimum required age for this movie")
