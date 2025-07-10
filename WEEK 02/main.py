@@ -1,61 +1,27 @@
 
-# * Keywords and Naming rules
-roll = 5
-Roll = 10
-ROLL = 15
-print(roll, Roll, ROLL)
+# * Escape characters
+print('It\'s beautiful day')
 
-# * Multiple assignments
-x, y = 1, 2
-print(x, y)
+print("We are from \"IIT\" Madras")
 
-a = b = c = 10
-print(a, b, c)
+print('My name is Siddharth. I am from Pune.')
+print('My name is Siddharth.\tI am from Pune.')
+print('My name is Siddharth.\nI am from Pune.')
 
-x, y = y, x
-print(x, y)
 
-# * Deleting a variable
+# * Types of quotes
+x = 'This is a string'
+y = "This is a string"
+z = '''First line
+Second Line
+Third Line'''
+print(x)
+print(y)
+print(z)
 
-del x  # ? Deletes the variable from memory location
-
-# * Shorthand Operators
-
-#! +=
-count = 10
-count += 1  # count = count +1
-print(count)
-
-#! -=
-count = 10
-count -= 1
-print(count)
-
-#! *=
-count = 10
-count *= 2
-print(count)
-
-#! /=
-count = 10
-count /= 2
-print(count)
-
-#! %=
-count = 10
-count %= 3
-print(count)
-
-# * IN Operator
-
-print("alpha" in "A variable name can only contain alpha-numeric characters and underscores")
-print("alpha" in "A variable name must start with a letter or the underscore character")
-
-# * Chaining Operators
-
-x = 5
-print(1 < x < 10)
-print(10 < x < 20)
-print(x < 10 < x*10 < 100)
-print(10 > x <= 9)
-print(5 == x > 4)
+# * Multi lines comment
+'''
+print(x)
+print(y)
+print(z)
+'''
