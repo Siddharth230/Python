@@ -1,6 +1,16 @@
-year = int(input("When did India get it's independence (year)? "))
 
-while year != 1947:
-    year = int(input("You have got this wrong. Enter once again: "))
+# * Let us find the factorial of a number
 
-print("It's Correct.")
+n = int(input("Enter a number: "))
+
+i = 1
+
+ans = 1
+
+# ? Executes the loop when condition is True and stops executing when condition becomes False
+while i <= n:
+    ans *= i
+    i += 1
+
+
+print(ans)
