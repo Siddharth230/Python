@@ -1,5 +1,7 @@
 
-n = int(input("Enter a number: "))
+for x in range(9, -5, -2):  # ? range(startpoint, endpoint, steps)
+    print(x)
 
-for i in range(1, n+1):
-    print(f"2 X {i} = {i*2}")
+country = 'India'
+for letter in country:
+    print(letter)
