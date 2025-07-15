@@ -1,39 +1,62 @@
-import sys
+import string
+
+l = [5, 7, 19, 10, 4]
+
+l.append(100)
+print(l)
+l.remove(7)
+print(l)
+# ? List can be changed
+
+s = {1, 7, 9}
+print(s)
+
+# * Tuples
+t = (2, 7, 18, 64, 101, 108, 65)
+print(t)
+
+print(t.count(2))
+print(t.index(64))
+# ? Tuple is unchangeable
+
 
 l = list(range(10))
-
 print(l)
 
-l.append('Siddharth')
-l.append('India')
-l.append(2.71)
+t = tuple(range(10))
+print(t)
 
+# ? List is flexible, but Tuple isn't
+
+print(string.ascii_letters)
+print(string.ascii_uppercase)
+print(string.ascii_lowercase)
+
+s = string.ascii_letters
+print(s)
+
+s = set(s)
+print(s)
+
+alpha = tuple(s)
+print(alpha)
+
+s = string.ascii_letters
+alpha = tuple(list(s))
+
+print(list(s))
+print(alpha)
+
+x = 'siddharth#@9563&$QIndiabharat*#(!)Maharashtra pune'
+
+l = list(x)
 print(l)
 
-print(5 in l)
-print('Siddharth' in l)
-print('siddharth' in l)
-print('Om' in l)
-print(2.71 in l)
-print(2.710 in l)
+r = []
+for c in l:
+    if c in alpha:
+        r.append(c)
 
+print(r)
 
-x = [1, 7, 2, 9, 6, 4, 8, 3, 1]
-
-print(x)
-
-y = {1, 7, 2, 9, 6, 4, 8, 3, 1}
-
-print(type(x))
-
-print(y)
-print(type(y))
-
-print(2 in y)
-print(10 in y)
-
-s = set(range(100))
-print(sys.getsizeof(s))
-
-x = list(range(100))
-print(sys.getsizeof(x))
+print(alpha)
