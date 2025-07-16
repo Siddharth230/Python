@@ -1,28 +1,49 @@
-def add(a, b):
-    ans = a+b
-    return ans
+# Let us write a few functions on lists
+
+def list_min(l):
+    m = l[0]
+    for i in range(len(l)):
+        if l[i] < m:
+            m = l[i]
+    return m
 
 
-print(add(1, 6))
-
-print(add(10, 39))
-
-
-def sub(a, b):
-    ans = a-b
-    return ans
+def list_max(l):
+    m = l[0]
+    for i in range(len(l)):
+        if l[i] > m:
+            m = l[i]
+    return m
 
 
-print(sub(10, 8))
+def list_appendbefore(l, z):
+    new_list = []
+    for i in range(len(z)):
+        new_list.append(z[i])
+    for i in range(len(l)):
+        new_list.append(l[i])
+    return new_list
 
 
-def discount(cost, d):
-    ans = cost - (cost*(d/100))
-    return ans
+def list_appendend(l, z):
+    for i in range(len(z)):
+        l.append(z[i])
+    return l
 
 
-print(discount(100, 20))
+def list_avg(l):
+    sum = 0
+    for i in range(len(l)):
+        sum += l[i]
+    avg = sum / len(l)
+    return avg
 
-print(discount(2173, 9))
 
-print(add(17, 5)+sub(100, 3)+discount(1500, 7.5))
+A = [8, 23, 58, 4]
+B = [1, 2, 3]
+
+print(list_min(A))
+print(list_max(A))
+print(list_appendbefore(A, B))
+print(list_appendend(A, B))
+print(list_avg(A))
