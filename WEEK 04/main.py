@@ -1,23 +1,35 @@
-s = {1, 2, 3, 4, 5, 1, 2, 3, 5}
-print(s)  # ? Sets doesn't allow duplicate values
+t = 1, 2, 3
+print(t, type(t))
 
-# print(s[0]) #? Sets are unordered. Sets are not subscriptable
+x, y, z = t  # ? Unpacking Tuple
+print(x, y, z)
 
-A = {1, 3, 5}
-B = {1, 2, 3, 4, 5}
-print(A.issubset(B))
-print(A.issuperset(B))
+x = 5
+y = 10
+x, y = y, x
+print(x, y)
 
-C1 = A.union(B)
-C2 = A | B  # ? '|' Union Operator
-print(C1, C2)
+l = [10]
+print(l, type(l))
 
-A = {1, 2, 3}
-B = {3, 4, 5}
-C3 = A.intersection(B)
-C4 = A & B  # ? '&' Intersection Operator
-print(C3, C4)
+t = (10)
+# ? Tuple needs two values for it to be considered as Tuple by Python
+print(t, type(t))
 
-C5 = A.difference(B)
-C6 = A - B
-print(C5, C6)
+t = (10,)
+print(t, type(t))
+
+t = ([1, 2], ['a', 'b'])
+print(t)
+
+# t[0] = [10, 20]   #* TypeError: 'tuple' object does not support item assignment
+# print(t)
+
+t[0][0], t[0][1] = 10, 20  # ? We can modify Lists inside Tuple
+print(t)
+
+# * Hashable Tuple
+t1 = (1, 2, 3)  # ? Values inside Tuples are immutable
+
+# * Non-Hashable Tuple
+t2 = ([1, 2, 3],)  # ? Values inside Tuples are mutable
