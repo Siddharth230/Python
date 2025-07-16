@@ -1,44 +1,28 @@
-from math import pi
+def add(a, b):
+    ans = a+b
+    return ans
 
 
-# squares = []
-# for x in range(10):
-#     squares.append(x**2)
+print(add(1, 6))
 
-squares = [x**2 for x in range(10)]
-print(squares)
+print(add(10, 39))
 
 
-# a = []
-# for x in [1, 2, 3]:
-#     for y in [3, 1, 4]:
-#         if x != y:
-#             a.append((x, y))
-
-a = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y]
-print(a)
+def sub(a, b):
+    ans = a-b
+    return ans
 
 
-p = [str(round(pi, i)) for i in range(1, 6)]
-print(p)
+print(sub(10, 8))
 
 
-matrix = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-]
-
-# A = []
-# for i in range(4):
-#     A_row = []
-#     for row in matrix:
-#         A_row.append(row[i])
-#     A.append(A_row)
-
-A = [[row[i] for row in matrix] for i in range(4)]
-print(A)
+def discount(cost, d):
+    ans = cost - (cost*(d/100))
+    return ans
 
 
-B = zip(*matrix)
-print(list(B))  # No error if 'list' hasn't been overwritten
+print(discount(100, 20))
+
+print(discount(2173, 9))
+
+print(add(17, 5)+sub(100, 3)+discount(1500, 7.5))
