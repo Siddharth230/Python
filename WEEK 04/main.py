@@ -1,35 +1,44 @@
-t = 1, 2, 3
-print(t, type(t))
+from math import pi
 
-x, y, z = t  # ? Unpacking Tuple
-print(x, y, z)
 
-x = 5
-y = 10
-x, y = y, x
-print(x, y)
+# squares = []
+# for x in range(10):
+#     squares.append(x**2)
 
-l = [10]
-print(l, type(l))
+squares = [x**2 for x in range(10)]
+print(squares)
 
-t = (10)
-# ? Tuple needs two values for it to be considered as Tuple by Python
-print(t, type(t))
 
-t = (10,)
-print(t, type(t))
+# a = []
+# for x in [1, 2, 3]:
+#     for y in [3, 1, 4]:
+#         if x != y:
+#             a.append((x, y))
 
-t = ([1, 2], ['a', 'b'])
-print(t)
+a = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y]
+print(a)
 
-# t[0] = [10, 20]   #* TypeError: 'tuple' object does not support item assignment
-# print(t)
 
-t[0][0], t[0][1] = 10, 20  # ? We can modify Lists inside Tuple
-print(t)
+p = [str(round(pi, i)) for i in range(1, 6)]
+print(p)
 
-# * Hashable Tuple
-t1 = (1, 2, 3)  # ? Values inside Tuples are immutable
 
-# * Non-Hashable Tuple
-t2 = ([1, 2, 3],)  # ? Values inside Tuples are mutable
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+]
+
+# A = []
+# for i in range(4):
+#     A_row = []
+#     for row in matrix:
+#         A_row.append(row[i])
+#     A.append(A_row)
+
+A = [[row[i] for row in matrix] for i in range(4)]
+print(A)
+
+
+B = zip(*matrix)
+print(list(B))  # No error if 'list' hasn't been overwritten
