@@ -1,30 +1,79 @@
-a = 100
-b = 20
+import math
 
-# if a < b:
-#     small = a
-# else:
-#     small = b
+# def add(x, y):
+#     return x+y
 
-small = a if a < b else b
 
-print(small)
+# def sub(x, y):
+#     return x-y
 
-a = 5
 
-# while a>0: print(a); a-=1
-while a > 0:
-    print(a)
-    a -= 1
+# def mul(x, y):
+#     return x*y
+
+
+# def div(x, y):
+#     return x/y
+
+
+add = lambda x, y: x + y
+sub = lambda x, y: x - y
+mul = lambda x, y: x * y
+div = lambda x, y: x / y
+
+print(add(10, 20))
+print(sub(10, 20))
+print(mul(10, 20))
+print(div(10, 20))
+
+print(type(add))
 
 fruits = [
-    'mango', 'apple', 'banana', 'orange', 'pineapple', 'watermelon', 'guava', 'kiwi']
+    "mango",
+    "apple",
+    "banana",
+    "orange",
+    "pineapple",
+    "watermelon",
+    "guava",
+    "kiwi",
+]
 
-# newList = []
-# for fruit in fruits:
-#     if 'n' in fruit:
-#         newList.append(fruit.capitalize())
+size = [5, 5, 6, 6, 9, 10, 5, 4]
 
-newList = [fruit.capitalize() for fruit in fruits if 'n' in fruit]
+for fruit in enumerate(fruits):
+    print(fruit)
 
-print(newList)
+print(list(zip(fruits, size)))
+print(dict(zip(fruits, size)))
+
+a = [10, 20, 30, 40, 50, 60]
+b = [5, 10, 15, 20, 25, 30]
+
+
+def sub(x, y):
+    return x - y
+
+
+def incr(x):
+    return x + 1
+
+
+c = map(sub, a, b)
+c = map(incr, a)
+print(list(c))
+
+a = [25, -16, 9, 81, -100]
+
+
+def square_root(n):
+    return math.sqrt(n)
+
+
+def is_positive(n):
+    if n >= 0:
+        return n
+
+
+c = map(square_root, filter(is_positive, a))
+print(list(c))
