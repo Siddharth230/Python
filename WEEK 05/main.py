@@ -1,44 +1,47 @@
-# Find out the minimum most element in the list l
-# append that to a new list x
-# remove the minimum from the original list l
+"""
+This module demonstrates matrix multiplication using nested loops and NumPy.
+"""
+import numpy
 
-def min_list(l):
-    m = l[0]
-    for i in range(len(l)):
-        if l[i] < m:
-            m = l[i]
-    return m
+r1 = [1, 2, 3]
+r2 = [4, 5, 6]
+r3 = [7, 8, 9]
 
+s1 = [1, 2, 1]
+s2 = [6, 2, 3]
+s3 = [4, 2, 1]
 
-def obv_sort(l):
-    x = []
-    while len(l) > 0:
-        m = min_list(l)
-        x.append(m)
-        l.remove(m)
-    return x
+A = []
+B = []
+A.append(r1)
+A.append(r2)
+A.append(r3)
 
+B.append(s1)
+B.append(s2)
+B.append(s3)
 
-def obvious_sort(l):
-    x = []
-    while len(l) > 0:
-        m = l[0]
-        for i in range(len(l)):
-            if l[i] < m:
-                m = l[i]
-        x.append(m)
-        l.remove(m)
-    return x
+C = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
+dim = 3
 
-List = [4, 39, 68, 9, 17, 1, 53, 28]
+# ? C[i][j] is the dot product of the i th row of A and j th column of B
 
-print(List)
+print(A)
+print(B)
 
-# print(obvious_sort(List))
-print(obv_sort(List))
+for i in range(dim):
+    for j in range(dim):
+        for k in range(dim):
+            C[i][j] += A[i][k]*B[k][j]
 
+print(C)
+# C[i][j] = dot product of A[i][...] and B[...][j]
 
-# We just learnt that braking our problem
-# into smaller modules and solving them
-# makes it easy
+X = numpy.asmatrix(A)
+Y = numpy.asmatrix(B)
+
+print(X)
+print(Y)
+
+print(X*Y)
