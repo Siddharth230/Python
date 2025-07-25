@@ -1,17 +1,56 @@
-f = open("newnum.txt", "r")
+"""This program considers an input file and encrypts it by
+ceaser cipher. By that we mean, we shift the letters by 3
+units. For example, a becomes d, b becomes e and so on ...
+w becomes x, x becomes a,y becomes b and z becomes c"""
 
-flag = 0
+import string
 
-s = "0"
 
+def create_caeser_dictionary():
+    l = string.ascii_lowercase
+    l = list(l)
+    d = {}
+    for i in range(len(l)):
+        d[l[i]] = l[(i + 3) % 26]
+    return d
+
+
+f = open("sherlock.txt", "r")
+g = open("encrypted_sherlock.txt", "w")
+
+d = create_caeser_dictionary()
+
+c = f.read(1)
+while c != "":
+    g.write(d[c])
+    c = f.read(1)
+
+
+f.close()
+g.close()
+
+
+# * Now let's decrypt this file
+
+
+def decryt():
+    l = string.ascii_lowercase
+    l = list(l)
+    d = {}
+    for i in range(len(l)):
+        d[l[i]] = l[(i - 3 + 26) % 26]
+    return d
+
+
+f = open("encrypte_sherlock.txt", "r")
+g = open("decrypt.txt", "w")
+
+a = decryt()
+s = f.read(1)
 while s != "":
-    s = f.readline()
-    if s != "":
-        n = int(s)
-        if n == 2:
-            print("The number was found")
-            flag = 1
-            break
+    g.write(a[s])
+    s = f.read(1)
 
-if flag == 0:
-    print("The number was not found")
+
+f.close()
+g.close()
