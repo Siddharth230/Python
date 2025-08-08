@@ -1,23 +1,19 @@
-l = [341, 223, 53, 5, 32, 7, 21, 3, 0]
+def mini(L):
+    m = L[0]
+    for i in L:
+        if i < m:
+            m = i
+    return m
 
 
-def check0(list):
-    for i in range(len(list)):
-        if list[i] == 0:
-            return True
-    return False
+def Sort(L):
+    if L == [] or len(L) == 1:
+        return L
+    m = mini(L)
+    L.remove(m)
+    return [m] + Sort(L)
 
 
-print(check0(l))
+l = [1374, 33, 0, 12, 5, 324]
 
-
-def Check0(L):
-    if len(L) == 0:
-        return False
-    if L[0] == 0:
-        return True
-    else:
-        return Check0(L[1:])
-
-
-print(Check0(l))
+print(Sort(l))
