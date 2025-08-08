@@ -1,50 +1,23 @@
-# n = 10
-# ans = 0
-# for i in range(n):
-#     ans = ans + (i + 1)
-# print(ans)
+l = [341, 223, 53, 5, 32, 7, 21, 3, 0]
 
 
-# def sum(n):
-#     ans = 0
-#     for i in range(n):
-#         ans += i + 1
-#     return ans
+def check0(list):
+    for i in range(len(list)):
+        if list[i] == 0:
+            return True
+    return False
 
 
-# print(sum(10))
-# print(sum(100))
+print(check0(l))
 
 
-# * Recursion in python
-def sum(n):
-    if n == 1:
-        return 1
+def Check0(L):
+    if len(L) == 0:
+        return False
+    if L[0] == 0:
+        return True
     else:
-        return n + sum(n - 1)
+        return Check0(L[1:])
 
 
-# ? Python let's you call the same function within the function
-print(sum(10))
-print(sum(100))
-
-
-# ? Compute compound interest by assuming the interest to be 10%
-def comp(p, n):
-    if n == 1:
-        return p * 1.1
-    else:
-        return comp(p, n - 1) * 1.1
-
-
-print(comp(1000, 2))
-
-
-def fact(n):
-    if n == 1:
-        return 1
-    else:
-        return fact(n - 1) * n
-
-
-print(fact(10))
+print(Check0(l))
