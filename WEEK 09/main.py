@@ -1,19 +1,34 @@
-def mini(L):
-    m = L[0]
-    for i in L:
-        if i < m:
-            m = i
-    return m
+import time
 
 
-def Sort(L):
-    if L == [] or len(L) == 1:
-        return L
-    m = mini(L)
-    L.remove(m)
-    return [m] + Sort(L)
+def obvious_search(L, k):
+    for x in L:
+        if x == k:
+            return 1
+    return 0
 
 
-l = [1374, 33, 0, 12, 5, 324]
+L = list(range(100000000))
+print(obvious_search(L, 54))
 
-print(Sort(l))
+
+def sum(n):
+    ans = 0
+    for i in range(n):
+        ans += i
+    return ans
+
+
+print(sum(10))
+print(sum(100))
+
+a = time.time()
+print(sum(10000000))
+b = time.time()
+print(b - a)
+
+
+a = time.time()
+print(obvious_search(L, 9999999999))
+b = time.time()
+print(b - a)
