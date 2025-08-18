@@ -1,26 +1,23 @@
 class Student:
-    roll_no = None
-    name = None
+    def __init__(self, roll_no, name, total):
+        self.roll_no = roll_no
+        self.name = name
+        self.total = total
+
+    def display(self):
+        print(self.roll_no, self.name, self.total)
+
+    def result(self):
+        if self.total > 120:
+            print("Pass")
+        else:
+            print("Fail")
 
 
-s0 = Student()
-s1 = Student()
+s0 = Student(0, "Siddharth", 100)
+s0.display()
+s0.result()
 
-s0.roll_no = 0
-s0.name = "Siddharth"
-
-print(s0.roll_no, s0.name)
-
-print(s1.roll_no, s1.name)
-
-s2 = Student()
-
-s2.roll_no = 2
-s2.name = "Om"
-
-print(s2.roll_no, s2.name)
-
-s50 = Student()
-s50.name = "Sid"
-
-print(s50.roll_no, s50.name)
+s1 = Student(1, "Om", 150)
+s1.display()
+s1.result()
