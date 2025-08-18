@@ -1,23 +1,8 @@
-class Student:
-    def __init__(self, roll_no, name, total):
-        self.roll_no = roll_no
-        self.name = name
-        self.total = total
+from Student import Student
+from Employee import Employee
 
-    def display(self):
-        print(self.roll_no, self.name, self.total)
+s = Student("Siddharth", 20, 250)
+s.display()
 
-    def result(self):
-        if self.total > 120:
-            print("Pass")
-        else:
-            print("Fail")
-
-
-s0 = Student(0, "Siddharth", 100)
-s0.display()
-s0.result()
-
-s1 = Student(1, "Om", 150)
-s1.display()
-s1.result()
+e = Employee("Om", 30, 50000)
+e.display()
