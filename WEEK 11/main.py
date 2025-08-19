@@ -1,12 +1,21 @@
-import numpy as np
+# f = open("scores.csv", "r")
+# scores = f.readlines()[1:]
+# max = 0
+# for record in scores:
+#     fields = record.split(",")
+#     if int(fields[8]) > max:
+#         max = int(fields[8])
+# print(max)
 
-a = np.array(42)
-b = np.array([1, 2, 3, 4, 5])
-c = np.array([[1, 2, 3], [4, 5, 6]])
-d = np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])
+import pandas as pd
 
-
-print(a, a.ndim, "\n")
-print(b, b.ndim, "\n")
-print(c, c.ndim, "\n")
-print(d, d.ndim, "\n")
+scores = pd.read_csv("scores.csv")
+print(scores["Total"].max())
+print(scores["Total"].min())
+print(scores["Total"].mean())
+print(scores["Total"].sum())
+print(scores["Total"].sort_values())
+print(scores["Total"].sort_values(ascending=False))
+# print(scores)
+# print(scores.shape)
+# print(scores.count())
