@@ -1,28 +1,21 @@
-import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
-scores = pd.read_csv("scores.csv")
-print(scores, type(scores))
-print(scores["Name"], type(scores["Name"]))
-print(scores.head())
-print(scores.tail())
-print(scores[scores["Name"] == "Siddharth"])
-print(scores[scores["Gender"] == "M"]["Total"].max())
-print(scores[scores["Gender"] == "F"]["Total"].max())
-subject = ["Mathematics", "Physics", "Chemistry"]
-for sub in subject:
-    print(f"Above 85 in {sub}")
-    print(scores[(scores["Gender"] == "F") & (scores[sub] > 85)].shape[0])
-    print(scores[(scores["Gender"] == "M") & (scores[sub] > 85)].shape[0])
-print(scores[scores["Physics"].between(70, 85)].shape[0])
-print(scores[scores["Physics"].between(60, 70)].shape[0])
-print(scores[scores["Physics"] < 60].shape[0])
-for sub in subject:
-    print(f"Above average {sub}")
-    avg = scores[sub].mean()
-    print(scores[(scores["Gender"] == "F") & (scores[sub] > avg)].shape[0])
-    print(scores[(scores["Gender"] == "M") & (scores[sub] > avg)].shape[0])
-print(scores.groupby("Gender").groups)
-for sub in subject:
-    print(f"Above average {sub}")
-    avg = scores[sub].mean()
-    print(scores[(scores[sub] > avg)].groupby("Gender").groups)
+x = np.array([5, 7, 8, 2, 17, 2, 9, 4, 11, 12, 9, 6])
+y = np.array([99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86])
+plt.scatter(x, y)
+plt.show()
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+plt.bar(x, y)
+plt.show()
+
+x = np.random.normal(170, 10, 250)
+plt.hist(x)
+plt.show()
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+plt.pie(y, labels=mylabels, startangle=90)
+plt.show()
